@@ -1,0 +1,62 @@
+/* Định dạng chung cho toàn bộ website */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #fcfbf9; color: #333; line-height: 1.6; }
+
+/* --- HEADER (Dùng chung) --- */
+header { background: #4b3621; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; }
+.logo { color: #f3e5ab; font-size: 24px; font-weight: bold; text-transform: uppercase; }
+nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+nav a:hover { color: #f3e5ab; }
+
+/* --- FOOTER (Dùng chung) --- */
+footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+
+/* --- CÁC CLASS CHO TỪNG TRANG --- */
+
+/* Trang Chủ */
+.banner {
+    height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.banner h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.btn { padding: 12px 30px; background: #c08945; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+.featured { padding: 50px; text-align: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
+
+/* Thực Đơn */
+.menu-title { text-align: center; padding: 40px 0; color: #4b3621; }
+.menu-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+.item { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.item:hover { transform: translateY(-5px); }
+.item img { width: 100%; height: 200px; object-fit: cover; }
+.info { padding: 15px; text-align: center; }
+.name { font-weight: bold; color: #333; margin-bottom: 5px; }
+.price { color: #c08945; font-weight: bold; font-size: 1.1rem; }
+.btn-add { display: block; width: 100%; padding: 10px; background: #4b3621; color: white; border: none; margin-top: 10px; cursor: pointer; }
+
+/* Giới Thiệu */
+.about-section { display: flex; max-width: 1000px; margin: 60px auto; align-items: center; gap: 50px; }
+.about-section.reverse { flex-direction: row-reverse; }
+.about-img { flex: 1; }
+.about-img img { width: 100%; border-radius: 10px; box-shadow: 10px 10px 0 #c08945; }
+.about-content { flex: 1; }
+.about-content h2 { font-size: 2rem; color: #4b3621; margin-bottom: 20px; }
+
+/* Liên Hệ */
+.container-contact { max-width: 900px; margin: 50px auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); display: flex; gap: 40px; }
+.contact-info { flex: 1; padding-right: 20px; border-right: 1px solid #eee; }
+.contact-form { flex: 1.5; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+.form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; outline: none; }
+.btn-submit { background: #4b3621; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
