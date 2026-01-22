@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Chủ - Tiệm Cà Phê</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #fcfbf9; color: #333; }
+        
+        /* Header */
+        header { background: #4b3621; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { color: #f3e5ab; font-size: 24px; font-weight: bold; text-transform: uppercase; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: #f3e5ab; }
+        
+        /* Banner */
+        .banner {
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify_content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .banner h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        .btn { padding: 12px 30px; background: #c08945; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        
+        /* Featured */
+        .featured { padding: 50px; text-align: center; }
+        .featured h2 { margin-bottom: 30px; color: #4b3621; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
+        .card h3 { margin: 15px 0 10px; }
+        
+        /* Footer */
+        footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">COFFEE SHOP</div>
+        <nav>
+            <a href="trang-chu.html">Trang chủ</a>
+            <a href="thuc-don.html">Thực đơn</a>
+            <a href="gioi-thieu.html">Giới thiệu</a>
+            <a href="lien-he.html">Liên hệ</a>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h1>Hương Vị Cà Phê Đích Thực</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Khởi đầu ngày mới với năng lượng tuyệt vời nhất</p>
+        <a href="thuc-don.html" class="btn">XEM THỰC ĐƠN NGAY</a>
+    </div>
+
+    <section class="featured">
+        <h2>Sản Phẩm Bán Chạy</h2>
+        <div class="grid-3">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=500&q=60" alt="Cafe">
+                <h3>Cappuccino Nghệ Thuật</h3>
+                <p>45.000đ</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1686860633705-52054227718b??auto=format&fit=crop&w=500&q=60" alt="Cafe">
+                <h3>Espresso Đậm Đà</h3>
+                <p>35.000đ</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1651438131332-61b7cd91ebca?auto=format&fit=crop&w=500&q=60" alt="Cafe">
+                <h3>Latte Đá Xay</h3>
+                <p>50.000đ</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; demo web - Coffee project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
