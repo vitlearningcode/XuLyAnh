@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>COFFEE SHOP - Menu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c38941",
+                        "background-light": "#fcfbf9",
+                        "background-dark": "#1e1a14",
+                        "text-main": "#191510",
+                        "text-sub": "#8b755b",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col">
+    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f1eee9] dark:border-[#2e2a24] px-10 py-4 bg-white dark:bg-[#25211b] sticky top-0 z-50">
+        <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-text-main dark:text-white">
+                <div class="size-8 text-primary">
+                    <span class="material-symbols-outlined text-4xl">local_cafe</span>
+                </div>
+                <h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">COFFEE SHOP</h2>
+            </div>
+            <div class="hidden md:flex items-center gap-9">
+                <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="trangchu.html">Home</a>
+                <a class="text-primary text-sm font-bold border-b-2 border-primary" href="menu.html">Menu</a>
+                <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="gioithieu.html">About</a>
+                <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="lienhe.html">Contact</a>
+            </div>
+        </div>
+        <div class="flex flex-1 justify-end gap-6 items-center">
+            <div class="flex gap-3">
+                <button class="flex items-center justify-center rounded-full size-10 bg-[#f1eee9] dark:bg-[#332f29] text-text-main dark:text-white hover:bg-[#e6e2db] dark:hover:bg-[#403b34] transition-colors relative">
+                    <span class="material-symbols-outlined text-xl">shopping_cart</span>
+                    <span class="absolute top-1 right-1 bg-primary text-white text-[10px] font-bold size-3.5 rounded-full flex items-center justify-center">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow">
+        <div class="max-w-[1200px] mx-auto px-6 py-10 w-full">
+            <div class="flex flex-col items-center gap-8 mb-12">
+                <div class="text-center space-y-2">
+                    <h1 class="text-text-main dark:text-white text-4xl md:text-5xl font-extrabold leading-tight tracking-[-0.033em]">Thực Đơn Hôm Nay</h1>
+                    <p class="text-text-sub text-lg font-normal">Freshly brewed moments, served daily.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button class="group flex h-10 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-6 shadow-sm hover:shadow-md transition-all">
+                        <span class="material-symbols-outlined text-[20px]">coffee</span>
+                        <span class="text-sm font-semibold">All</span>
+                    </button>
+                    <button class="group flex h-10 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#25211b] border border-[#e5e0d8] dark:border-[#3a3630] text-text-main dark:text-gray-200 px-6 hover:border-primary hover:text-primary transition-all">
+                        <span class="material-symbols-outlined text-[20px]">local_cafe</span>
+                        <span class="text-sm font-semibold">Coffee</span>
+                    </button>
+                    <button class="group flex h-10 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#25211b] border border-[#e5e0d8] dark:border-[#3a3630] text-text-main dark:text-gray-200 px-6 hover:border-primary hover:text-primary transition-all">
+                        <span class="material-symbols-outlined text-[20px]">emoji_food_beverage</span>
+                        <span class="text-sm font-semibold">Tea</span>
+                    </button>
+                    <button class="group flex h-10 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#25211b] border border-[#e5e0d8] dark:border-[#3a3630] text-text-main dark:text-gray-200 px-6 hover:border-primary hover:text-primary transition-all">
+                        <span class="material-symbols-outlined text-[20px]">cookie</span>
+                        <span class="text-sm font-semibold">Pastries</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group bg-white dark:bg-[#25211b] rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-[#f1eee9] dark:hover:border-[#3a3630]">
+                    <div class="aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#f8f6f4] dark:bg-[#2e2a24] mb-4 relative">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmtOcEQepS8keBQj7RLhD5qjEOwWqMzTa8QTS3_dzHdU5xuips7EGoIhM9NzdCejVcdIur_MyaKuQPGqDFtpb0EkSozzAY7swdOvFoqLiQ2uQ-WRNrUqvXjZYO3rD-mbH_Q9-hanDJplSCI4V-wXGlqG5DEx7PvPfRYrmHh2Mr4lCv2JM4O9qajLIWp0dw1wrOE20isKX6_7vqLmqYhUBvpMdmp3bKAhLwS8TO2LxsErm5LgzJp6YdzTEVEGLE4n5P_HoqjgtsZzk");'></div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Cà Phê Sữa Đá</h3>
+                        <p class="text-text-sub text-sm line-clamp-2 mb-2">Cà phê đá Việt Nam với sữa đặc.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-primary text-lg font-bold">45.000đ</span>
+                            <button class="flex items-center gap-1 bg-[#f1eee9] dark:bg-[#332f29] hover:bg-primary hover:text-white text-text-main dark:text-white px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="group bg-white dark:bg-[#25211b] rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-[#f1eee9] dark:hover:border-[#3a3630]">
+                    <div class="aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#f8f6f4] dark:bg-[#2e2a24] mb-4 relative">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCN8tgfZHyBdBlfgq-oqj-n_TbzHkQhiJWV3u7Ie5uuegHuCXZs7hGZA-s-lbE6sPHq36_embXNrEa6JrS6V8z2qLDsR0F3mpgnNAZJX_urtyILjnKlx6VnC1HdLAiH_48dt3NHZy8-9J5KiatLkEjVZM0TcRZfl9RBJQPPRsL05tZcL47f-F_GX85-EDFEvz7ZPxg3ps3BNRpYhPwmKeeXYfROVPcfRaGGukDPNRxfIhOLR8Z6pCvlZJGkAf81cQuBZQ-_9qTW36Q");'></div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Hot Latte</h3>
+                        <p class="text-text-sub text-sm line-clamp-2 mb-2">Espresso mịn với sữa hấp và một lớp bọt mỏng.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-primary text-lg font-bold">55.000đ</span>
+                            <button class="flex items-center gap-1 bg-[#f1eee9] dark:bg-[#332f29] hover:bg-primary hover:text-white text-text-main dark:text-white px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="group bg-white dark:bg-[#25211b] rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-[#f1eee9] dark:hover:border-[#3a3630]">
+                    <div class="aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#f8f6f4] dark:bg-[#2e2a24] mb-4 relative">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQHkjrIPI4wzTdcDPeLMikyWxxRQnjPiIcYW_VzSSx3JBD7tV8L6qXMNcZjiRC8KNjTs1OVYnqvjSy73CMdD6vUYXCeKAkwP5S9oOasbMyBaCNhb3zIgWReWwosARdQ_IfzVy3oKYDL6GwEw12k37Y57QQpViOdrrvBhJfiQC298rhC5a_5g7JsJJUcrDTJVMldws-Oy1L1lPoDWjKWDm1Qn8Gn48LhV25ZoqKyeISQes4Z-Ojk89jMTK9Et2oFgNjuo_UJqoIoxQ");'></div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Cappuccino</h3>
+                        <p class="text-text-sub text-sm line-clamp-2 mb-2">Lượng espresso, sữa hấp và bọt sữa bằng nhau.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-primary text-lg font-bold">50.000đ</span>
+                            <button class="flex items-center gap-1 bg-[#f1eee9] dark:bg-[#332f29] hover:bg-primary hover:text-white text-text-main dark:text-white px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="group bg-white dark:bg-[#25211b] rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-[#f1eee9] dark:hover:border-[#3a3630]">
+                    <div class="aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#f8f6f4] dark:bg-[#2e2a24] mb-4 relative">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYUv8bvL3wYs5Mt9EhB6fMW6wRqv3oPjabc7rrXV_BWLs65fdCd4qPrLRmwc3ceP4dLMIh4-3ZjNghERtgvZs3wbas6sPqf3C_S1ZGJvSHRnmDG_yKSxtukBqQvdBwKWIyWMYnvurC22yyjb5d5H_79CmnoFOxLZvMf69FPSy_lZGN3fPH4IDRMkvF1m99AUkjqieM06dVzOVOZGxOt5_XnFWOfo2v54uGqlFrucDw0DQTX2Kof9VfU-jh8tRhxFNgyFhqlloGKjc");'></div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Cold Brew</h3>
+                        <p class="text-text-sub text-sm line-clamp-2 mb-2">Ngâm trong 24 giờ để có hương vị êm dịu, đậm đà.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-primary text-lg font-bold">60.000đ</span>
+                            <button class="flex items-center gap-1 bg-[#f1eee9] dark:bg-[#332f29] hover:bg-primary hover:text-white text-text-main dark:text-white px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="group bg-white dark:bg-[#25211b] rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-[#f1eee9] dark:hover:border-[#3a3630]">
+                    <div class="aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#f8f6f4] dark:bg-[#2e2a24] mb-4 relative">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8oKAs6C2El-F-d4A3tI1wiZs1IBwLwZk9dwJmAaZCN2_vrFsuJGLfejpytuT1Si0AB2u5hA-C-8Fnypc3wFYvw0sAprc1XhIUrpCwNJ0FuwQrRSnF-KxS6ueGe9ZMbc-peEVA91IxObBpSUdzwSRMfaQBMsbRglud-VbA7rvQcMK7hdzKeTXqNk9nde7EiP5snp3VZbETMeI_XhaImFTXrSb5NGgl-DFY40sI5BeH4ZzyY7ERj-sAzPjWnozIH4toBbAzxJzKfxE");'></div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Espresso Macchiato</h3>
+                        <p class="text-text-sub text-sm line-clamp-2 mb-2">Cà phê espresso đậm đà, phủ thêm một lớp bọt kem.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-primary text-lg font-bold">40.000đ</span>
+                            <button class="flex items-center gap-1 bg-[#f1eee9] dark:bg-[#332f29] hover:bg-primary hover:text-white text-text-main dark:text-white px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="group bg-white dark:bg-[#25211b] rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-[#f1eee9] dark:hover:border-[#3a3630]">
+                    <div class="aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#f8f6f4] dark:bg-[#2e2a24] mb-4 relative">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0ks8f2HneWsDTN4GHwOhse7-zV9pdGLkbKHecwmTIW0uXwB3WGi2IFbD0JkcIcKwh4D0JR6G7ecduTHzEG-zho6_NfcNrso1NXTn2lB0paw6EFY-cQhZytohIGH153ax_cdsDy9hYia7CxDo2T0RqXlS99Gqyd4XZqxm1R5K2ziliUC2hQV7x6F708XGRo9yh54uk8Y7enWHZKtyuVTFhJpyV_HUTesnmhCh7mduUvksdpBo3YNcAzRlNbRRBDgFVCLo3jx5-zb8");'></div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Matcha Latte</h3>
+                        <p class="text-text-sub text-sm line-clamp-2 mb-2">Trà xanh matcha cao cấp Nhật Bản với sữa hấp.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-primary text-lg font-bold">65.000đ</span>
+                            <button class="flex items-center gap-1 bg-[#f1eee9] dark:bg-[#332f29] hover:bg-primary hover:text-white text-text-main dark:text-white px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="group bg-white dark:bg-[#25211b] rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-[#f1eee9] dark:hover:border-[#3a3630]">
+                    <div class="aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#f8f6f4] dark:bg-[#2e2a24] mb-4 relative">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClQuFzZNs3Gj55lAiZOP0w8n7_C8FtnjNlQsPZ--EIM4c9YQQ7Rnh9q2EYPfjqmJ3mIGMm-TIwGmR_BTZ3IzU_ApbArVYN7YU-I2O-zH5L9tcm2wixox-qAD5XlzOP5SXdWBi_Kz8mAjfeNY1MuspoqWcqiG3bhrnV2mvjzpQaUyqGwen6ySyhDbuKHJB4bDzLpUShljrIQCxbORfI1TYLyFjXYYaiHOrmFzn0iugq1D_972s393W-D8wBNRGRThg23ldSjHSbngg");'></div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Dark Mocha</h3>
+                        <p class="text-text-sub text-sm line-clamp-2 mb-2">Espresso, sốt mocha đắng ngọt và sữa hấp.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-primary text-lg font-bold">58.000đ</span>
+                            <button class="flex items-center gap-1 bg-[#f1eee9] dark:bg-[#332f29] hover:bg-primary hover:text-white text-text-main dark:text-white px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="group bg-white dark:bg-[#25211b] rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-[#f1eee9] dark:hover:border-[#3a3630]">
+                    <div class="aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#f8f6f4] dark:bg-[#2e2a24] mb-4 relative">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9VTag0zK5ba_pYYlWQBNgLxzmmC35rt1VFqPPcuYYqGgsw7jxhuGGrn9EwiB4mTtcA6BKXIz5w7h0jsatjPBVs8zD5s15722TAi67iaov4daCRblCYa2tIg4ESYrDav8WwBGX4pv3dR8wyJoFKl-Ox12UOq8YSU9cJ2PFWijAkA1emvsNw1KicQ1G_aoERXBCIdiEs_0Ll6CcPQjKkgDjbllNsj14hNthaC-pcCiifxoUn69ZacM6RGHI04ZurUks-cNUV9xHck4");'></div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Pour Over</h3>
+                        <p class="text-text-sub text-sm line-clamp-2 mb-2">Cà phê nguyên chất được pha thủ công để đảm bảo độ tinh khiết.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-primary text-lg font-bold">70.000đ</span>
+                            <button class="flex items-center gap-1 bg-[#f1eee9] dark:bg-[#332f29] hover:bg-primary hover:text-white text-text-main dark:text-white px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-12">
+                <button class="flex items-center gap-2 px-8 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-white font-bold transition-all">
+                    <span>Load More Menu</span>
+                    <span class="material-symbols-outlined">expand_more</span>
+                </button>
+            </div>
+        </div>
+    </main>
+    <!-- <footer class="bg-white dark:bg-[#25211b] border-t border-[#f1eee9] dark:border-[#2e2a24]">
+        <div class="max-w-[1200px] mx-auto px-6 py-12 flex flex-col items-center gap-8">
+            <div class="flex items-center gap-4 text-text-main dark:text-white">
+                <div class="size-6 text-primary">
+                    <span class="material-symbols-outlined text-2xl">local_cafe</span>
+                </div>
+                <span class="text-lg font-bold">COFFEE SHOP</span>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-8">
+                <a class="text-text-sub hover:text-primary transition-colors text-sm font-medium" href="gioithieu.html">Our Story</a>
+                <a class="text-text-sub hover:text-primary transition-colors text-sm font-medium" href="lienhe.html">Contact Us</a>
+            </div>
+            <p class="text-text-sub text-sm">© 2024 COFFEE SHOP. All rights reserved.</p>
+        </div>
+    </footer> -->
+    <footer class="bg-background-dark text-white py-12 border-t border-[#3a3530]">
+        <div class="px-4 md:px-10 max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between gap-10">
+            <div class="flex flex-col gap-4 max-w-xs">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl">local_cafe</span>
+                    <h2 class="text-xl font-bold">COFFEE SHOP</h2>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Mang hương vị cà phê đích thực đến cuộc sống thường nhật của bạn. Cảm nhận sự ấm áp trong từng tách cà phê.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-8 md:gap-16">
+                <div class="flex flex-col gap-4">
+                    <h3 class="font-bold text-lg text-primary">Explore</h3>
+                    <a class="text-gray-400 hover:text-primary transition-colors text-sm" href="menu.html">Menu</a>
+                    <a class="text-gray-400 hover:text-primary transition-colors text-sm" href="gioithieu.html">About Us</a>
+                    <a class="text-gray-400 hover:text-primary transition-colors text-sm" href="lienhe.html">Contact</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h3 class="font-bold text-lg text-primary">Support</h3>
+                    <a class="text-gray-400 hover:text-primary transition-colors text-sm" href="lienhe.html">Contact Us</a>
+                    <a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 max-w-xs">
+                <h3 class="font-bold text-lg text-primary">Visit Us</h3>
+                <div class="flex items-start gap-3 text-gray-400 text-sm">
+                    <span class="material-symbols-outlined text-primary shrink-0">location_on</span>
+                    <p>123 Coffee Shop, TP. Long Xuyen, Vietnam</p>
+                </div>
+                <div class="flex items-center gap-3 text-gray-400 text-sm">
+                    <span class="material-symbols-outlined text-primary shrink-0">call</span>
+                    <p>+84 0814 585 526</p>
+                </div>
+            </div>
+        </div>
+        <div class="px-4 md:px-10 max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#3a3530] text-center text-gray-500 text-sm">
+            <p>© 2024 Coffee Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
