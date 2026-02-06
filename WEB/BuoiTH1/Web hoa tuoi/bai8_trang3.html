@@ -80,21 +80,7 @@
             </table>
 
             <br>
-            <table width="90%" bgcolor="#003366" align="center" cellpadding="5">
-                <tr>
-                    <td>
-                        <font face="Arial" color="#FFFFFF" size="2">
-                        Sunday <span style="font-size:20pt; float:right">07</span><br>
-                        Monday<br>
-                        Tuesday<br>
-                        Wednesday <span style="font-size:20pt; float:right">34</span><br>
-                        Thursday<br>
-                        Friday <span style="font-size:15pt; float:right">14 PM</span><br>
-                        Saturday
-                        </font>
-                    </td>
-                </tr>
-            </table>
+            <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:180px;height:150px;"src="https://www.clocklink.com/html5embed.php?clock=046&timezone=ACST&color=blue&size=256&Title=&Message=&Target=&From=2021,1,1,0,0,0&Color=blue"></iframe>
             <br>
         </td>
 
@@ -103,19 +89,48 @@
             <center>
                 <font face="Arial" size="4" color="#009900"><b>THÔNG TIN ĐĂNG KÝ</b></font>
             </center>
+
+          
+
             <form action="#" method="post">
                 <table border="0" cellpadding="5" align="center">
                     <tr>
                         <td>Họ và tên:</td>
                         <td><input type="text" name="hoten" size="30"></td>
                     </tr>
+
+                      
+
                     <tr>
                         <td>Ngày sinh:</td>
                         <td>
-                            Ngày <select><option>01</option></select>
+                            <select id="ngay"> <option>Ngay</option> </select>
+                            <select id="thang"> <option>Thang</option> </select>
+                            <select id="nam"> <option>Nam</option> </select>
+
+
+                            <!-- Ngày <select><option>01</option></select>
                             Tháng <select><option>01</option></select>
-                            Năm <select><option>1990</option></select>
+                            Năm <select><option>1990</option></select> -->
                         </td>
+
+                        <script>
+                            let ngay = document.getElementById("ngay");
+                            for (let i = 1; i <= 31; i++) {
+                                ngay.options[ngay.options.length] = new Option(i, i);
+                            }
+                        
+                            let thang = document.getElementById("thang");
+                            for (let i = 1; i <= 12; i++) {
+                                thang.options[thang.options.length] = new Option(i, i);
+                            }
+                        
+                            let nam = document.getElementById("nam");
+                            for (let i = 2026; i >= 1990; i--) {
+                                nam.options[nam.options.length] = new Option(i, i);
+                            }
+                        </script>
+                        
                     </tr>
                     <tr>
                         <td>Giới tính:</td>
@@ -169,5 +184,6 @@
 
 </table>
 
+ 
 </body>
 </html>
